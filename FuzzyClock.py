@@ -60,6 +60,8 @@ def fuzzyTime(hour, minutes):
     cond = ((minutes + 2) % 60) // 5
     if hour != 12:
         hour = hour % 12
+    if hour == 0:
+        hour = 12
     if minutes > 33:
         hour = next(hour)
     if cond == 0:
